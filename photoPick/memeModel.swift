@@ -18,11 +18,11 @@ struct Meme {
     var memedImage: UIImage
     
     // Initialisation
-    init (topText: String?, bottomText: String?, image: UIImage?, memedImage: UIImage) {
-        self.topText = topText
-        self.bottomText = bottomText
-        self.image = image
-        self.memedImage = memedImage
-        
-    }
+//    init (topText: String?, bottomText: String?, image: UIImage?, memedImage: UIImage) {
+//        self.topText = topText
+//        self.bottomText = bottomText
+//        self.image = image
+//        self.memedImage = memedImage
+//        
+//    }
 }

@@ -36,20 +36,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         takePictureButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         subscribeToKeyboardNotifications()
-
     }
     
+    
     override func viewDidLoad() {
-//        self.navigationController?.navigationBar.backgroundColor = topNavBar.backgroundColor!
-//        self.navigationController?.navigationBar.barTintColor = topNavBar.barTintColor
-//        print(topNavBar.backgroundColor, navigationController?.navigationBar.backgroundColor)
-//        print(topNavBar.barTintColor, navigationController?.navigationBar.barTintColor)
-
-//        navigationBar.barStyle = UIBarStyle.Default
         prepTextFields(textFieldTop, text: "TOP")
         prepTextFields(textFieldBottom, text: "BOTTOM")
-        
     }
+    
     
     func prepTextFields(textField: UITextField, text: String) {
         textField.delegate = self
@@ -57,8 +51,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.textAlignment = .Center
         textField.clearsOnBeginEditing = true
         textField.text = text
-        
     }
+    
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -70,7 +64,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         // load the image view with the selected image
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
         }
@@ -78,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         // making sure the photo gallery or camera view is dismissed
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 
@@ -87,16 +81,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(pickerController, animated: true, completion: nil)
+        presentViewController(pickerController, animated: true, completion: nil)
     }
+    
     
     @IBAction func takeAnImageWithCamera(sender: AnyObject) {
         // Action to launch the camera module and allow the user to take their own photo
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(pickerController, animated: true, completion: nil)
+        presentViewController(pickerController, animated: true, completion: nil)
     }
+    
     
     @IBAction func cancelEditing(sender: AnyObject) {
         prepTextFields(textFieldTop, text: "TOP")
@@ -116,27 +112,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let objectsToShare = [memeToShare.memedImage as AnyObject]
 
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.completionWithItemsHandler = {
+            (activity, success, items, error) in
+            print("Activity: \(activity) Success: \(success) Items: \(items) Error: \(error)")
+        }
         
-        self.presentViewController(activityVC, animated: true, completion: nil)
+        presentViewController(activityVC, animated: true, completion: nil)
     }
+    
     
     func save() -> Meme {
         // Create the meme
         let meme = Meme(topText: textFieldTop.text, bottomText: textFieldBottom.text, image: imagePickerView.image, memedImage: generateMemedImage())
-        
-        // just for placeholder output for now
-
-        print (meme.topText, meme.bottomText, meme.memedImage)
         return meme
     }
+    
     
     func generateMemedImage() -> UIImage {
         // capture the screen within the memeContainer view after hiding the navigation toolbars
         topNavBar.hidden = true
         bottomNavBar.hidden = true
         
-        UIGraphicsBeginImageContext(self.memeContainer.bounds.size)
-        self.memeContainer.drawViewHierarchyInRect(self.memeContainer.bounds, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(memeContainer.bounds.size)
+        memeContainer.drawViewHierarchyInRect(memeContainer.bounds, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -154,52 +152,57 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
+    
     func unsubscribeFromKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name:
-            UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
+    
     
     func keyboardWillShow(notification: NSNotification) {
         // Using scrollView as a solution to keyboard overlaying the textfield
         
-        var userInfo = notification.userInfo!
+        let userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
-        keyboardFrame = self.view.convertRect(keyboardFrame, fromView: nil)
+        keyboardFrame = view.convertRect(keyboardFrame, fromView: nil)
         
-        var contentInset:UIEdgeInsets = self.scrollSpace.contentInset
+        var contentInset:UIEdgeInsets = scrollSpace.contentInset
         contentInset.bottom = keyboardFrame.size.height
-        self.scrollSpace.contentInset = contentInset
-        
+        scrollSpace.contentInset = contentInset
         
     }
+    
 
     func keyboardWillHide(notification: NSNotification)
     {
         //Once keyboard disappears, restore original positions
         
         let contentInset:UIEdgeInsets = UIEdgeInsetsZero
-        self.scrollSpace.contentInset = contentInset
+        scrollSpace.contentInset = contentInset
         
     }
+    
 
 // TEXTFIELD DELEGATE functions
 //    TODO: Fix the capitalization not working - solved: it works on an actual iPhone but not on simulator.
-    
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
     
     func textFieldDidBeginEditing(textField: UITextField) {
         activeField = textField
         cancelButton.enabled = true
     }
     
+    
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         shareButton.enabled = true
         return true
     }
+    
     
     func textFieldDidEndEditing(textField: UITextField)
     {
