@@ -128,7 +128,7 @@
                             </toolbar>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="WkI-g7-Cie" secondAttribute="trailing" constant="-20" id="3Wy-mE-8CM"/>
                             <constraint firstAttribute="trailing" secondItem="zmv-NG-4Wm" secondAttribute="trailing" id="7k4-vA-bdO"/>

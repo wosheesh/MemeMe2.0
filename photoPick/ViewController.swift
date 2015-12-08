@@ -40,6 +40,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func viewDidLoad() {
+//        self.navigationController?.navigationBar.backgroundColor = topNavBar.backgroundColor!
+//        self.navigationController?.navigationBar.barTintColor = topNavBar.barTintColor
+//        print(topNavBar.backgroundColor, navigationController?.navigationBar.backgroundColor)
+//        print(topNavBar.barTintColor, navigationController?.navigationBar.barTintColor)
+
+//        navigationBar.barStyle = UIBarStyle.Default
         prepTextFields(textFieldTop, text: "TOP")
         prepTextFields(textFieldBottom, text: "BOTTOM")
         
