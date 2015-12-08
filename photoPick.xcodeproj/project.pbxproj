@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE1BB85C1C1205F800AC199C /* memeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BB85B1C1205F800AC199C /* memeModel.swift */; };
+		FEDEBF7A1C0D9A4A00A777AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEBF791C0D9A4A00A777AF /* AppDelegate.swift */; };
+		FEDEBF7C1C0D9A4A00A777AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEBF7B1C0D9A4A00A777AF /* ViewController.swift */; };
+		FEDEBF7F1C0D9A4A00A777AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDEBF7D1C0D9A4A00A777AF /* Main.storyboard */; };
+		FEDEBF811C0D9A4A00A777AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDEBF801C0D9A4A00A777AF /* Assets.xcassets */; };
+		FEDEBF841C0D9A4A00A777AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDEBF821C0D9A4A00A777AF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE1BB85B1C1205F800AC199C /* memeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memeModel.swift; sourceTree = "<group>"; };
+		FEDEBF761C0D9A4A00A777AF /* photoPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDEBF791C0D9A4A00A777AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEDEBF7B1C0D9A4A00A777AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEDEBF7E1C0D9A4A00A777AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEDEBF801C0D9A4A00A777AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEDEBF831C0D9A4A00A777AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEDEBF851C0D9A4A00A777AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEDEBF731C0D9A4A00A777AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEDEBF6D1C0D9A4A00A777AF = {
+			isa = PBXGroup;
+			children = (
+				FEDEBF781C0D9A4A00A777AF /* photoPick */,
+				FEDEBF771C0D9A4A00A777AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEDEBF771C0D9A4A00A777AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEDEBF761C0D9A4A00A777AF /* photoPick.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEDEBF781C0D9A4A00A777AF /* photoPick */ = {
+			isa = PBXGroup;
+			children = (
+				FEDEBF791C0D9A4A00A777AF /* AppDelegate.swift */,
+				FEDEBF7B1C0D9A4A00A777AF /* ViewController.swift */,
+				FEDEBF7D1C0D9A4A00A777AF /* Main.storyboard */,
+				FEDEBF801C0D9A4A00A777AF /* Assets.xcassets */,
+				FEDEBF821C0D9A4A00A777AF /* LaunchScreen.storyboard */,
+				FEDEBF851C0D9A4A00A777AF /* Info.plist */,
+				FE1BB85B1C1205F800AC199C /* memeModel.swift */,
+			);
+			path = photoPick;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEDEBF751C0D9A4A00A777AF /* photoPick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDEBF881C0D9A4A00A777AF /* Build configuration list for PBXNativeTarget "photoPick" */;
+			buildPhases = (
+				FEDEBF721C0D9A4A00A777AF /* Sources */,
+				FEDEBF731C0D9A4A00A777AF /* Frameworks */,
+				FEDEBF741C0D9A4A00A777AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = photoPick;
+			productName = photoPick;
+			productReference = FEDEBF761C0D9A4A00A777AF /* photoPick.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEDEBF6E1C0D9A4A00A777AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Wojtek Materka";
+				TargetAttributes = {
+					FEDEBF751C0D9A4A00A777AF = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 8VHSCMB438;
+					};
+				};
+			};
+			buildConfigurationList = FEDEBF711C0D9A4A00A777AF /* Build configuration list for PBXProject "photoPick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEDEBF6D1C0D9A4A00A777AF;
+			productRefGroup = FEDEBF771C0D9A4A00A777AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEDEBF751C0D9A4A00A777AF /* photoPick */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEDEBF741C0D9A4A00A777AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDEBF841C0D9A4A00A777AF /* LaunchScreen.storyboard in Resources */,
+				FEDEBF811C0D9A4A00A777AF /* Assets.xcassets in Resources */,
+				FEDEBF7F1C0D9A4A00A777AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEDEBF721C0D9A4A00A777AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDEBF7C1C0D9A4A00A777AF /* ViewController.swift in Sources */,
+				FEDEBF7A1C0D9A4A00A777AF /* AppDelegate.swift in Sources */,
+				FE1BB85C1C1205F800AC199C /* memeModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FEDEBF7D1C0D9A4A00A777AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEDEBF7E1C0D9A4A00A777AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FEDEBF821C0D9A4A00A777AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEDEBF831C0D9A4A00A777AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEDEBF861C0D9A4A00A777AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEDEBF871C0D9A4A00A777AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEDEBF891C0D9A4A00A777AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = photoPick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wojtekmaterka.photoPick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FEDEBF8A1C0D9A4A00A777AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = photoPick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wojtekmaterka.photoPick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEDEBF711C0D9A4A00A777AF /* Build configuration list for PBXProject "photoPick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDEBF861C0D9A4A00A777AF /* Debug */,
+				FEDEBF871C0D9A4A00A777AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEDEBF881C0D9A4A00A777AF /* Build configuration list for PBXNativeTarget "photoPick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDEBF891C0D9A4A00A777AF /* Debug */,
+				FEDEBF8A1C0D9A4A00A777AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEDEBF6E1C0D9A4A00A777AF /* Project object */;
+}
