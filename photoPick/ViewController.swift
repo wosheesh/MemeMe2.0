@@ -124,6 +124,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() -> Meme {
         // Create the meme
         let meme = Meme(topText: textFieldTop.text, bottomText: textFieldBottom.text, image: imagePickerView.image, memedImage: generateMemedImage())
+        
+//        TODO: make sure that the meme is only saved if sharing is complete - move this to shareMeme()
+        // add it to the memes array
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        
         return meme
     }
     
