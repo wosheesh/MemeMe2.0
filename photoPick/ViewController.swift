@@ -110,13 +110,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 // MEME CREATION functions
     
     @IBAction func shareMeme(sender: AnyObject) {
+//        TODO: After sharing user should be taken back to sent memes view
         let memeToShare = save()
         let objectsToShare = [memeToShare.memedImage as AnyObject]
 
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         activityVC.completionWithItemsHandler = {
-            (activity, success, items, error) in
-            print("Activity: \(activity) Success: \(success) Items: \(items) Error: \(error)")
+            (activity, success, returnedItems, error) in
+            print("Activity: \(activity) Success: \(success) Items: \(returnedItems) Error: \(error)")
+            
+            // add meme to the memes array
+            let object = UIApplication.sharedApplication().delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.memes.append(memeToShare)
+
         }
         
         presentViewController(activityVC, animated: true, completion: nil)
@@ -126,12 +133,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() -> Meme {
         // Create the meme
         let meme = Meme(topText: textFieldTop.text, bottomText: textFieldBottom.text, image: imagePickerView.image, memedImage: generateMemedImage())
-        
-//        TODO: make sure that the meme is only saved if sharing is complete - move this to shareMeme()
-        // add it to the memes array
-        let object = UIApplication.sharedApplication().delegate
-        let appDelegate = object as! AppDelegate
-        appDelegate.memes.append(meme)
         
         return meme
     }
