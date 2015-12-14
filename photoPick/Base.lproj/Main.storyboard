@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -102,18 +101,67 @@
                                                     <rect key="frame" x="20" y="639" width="360" height="17"/>
                                                 </variation>
                                             </textField>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkI-g7-Cie" userLabel="Top Nav Bar">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <items>
+                                                    <barButtonItem enabled="NO" systemItem="action" id="vRW-mf-Cmd">
+                                                        <connections>
+                                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="zCW-zG-5Hl"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sbf-fo-TwR"/>
+                                                    <barButtonItem title="Cancel" id="a3b-v9-wSX">
+                                                        <connections>
+                                                            <action selector="cancelEditing:" destination="BYZ-38-t0r" id="SgH-BX-Jff"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                                </variation>
+                                            </toolbar>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmv-NG-4Wm">
+                                                <rect key="frame" x="0.0" y="536" width="600" height="44"/>
+                                                <items>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HB7-ms-tGM"/>
+                                                    <barButtonItem title="Album" id="FmK-75-GpR">
+                                                        <connections>
+                                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="H8o-Xj-Se7"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="idU-ga-ROe"/>
+                                                    <barButtonItem systemItem="camera" id="BH6-rd-JA8">
+                                                        <connections>
+                                                            <action selector="takeAnImageWithCamera:" destination="BYZ-38-t0r" id="9Hy-1x-SYK"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2tB-E7-IRS"/>
+                                                </items>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="356" width="600" height="44"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="756" width="400" height="44"/>
+                                                </variation>
+                                            </toolbar>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="VB3-Id-uei" firstAttribute="height" secondItem="ahC-u5-haX" secondAttribute="height" id="1Ra-UT-Nn9"/>
                                             <constraint firstItem="2mj-dz-rQP" firstAttribute="leading" secondItem="ahC-u5-haX" secondAttribute="leading" constant="20" id="2DO-dk-6qK"/>
                                             <constraint firstItem="hPd-FZ-ZY5" firstAttribute="leading" secondItem="ahC-u5-haX" secondAttribute="leading" constant="20" id="EFc-Gb-8mK"/>
+                                            <constraint firstAttribute="bottom" secondItem="zmv-NG-4Wm" secondAttribute="bottom" id="Pd4-qy-AkN"/>
                                             <constraint firstItem="2mj-dz-rQP" firstAttribute="top" secondItem="ahC-u5-haX" secondAttribute="top" constant="50" id="UFm-I2-QDH"/>
                                             <constraint firstAttribute="bottom" secondItem="hPd-FZ-ZY5" secondAttribute="bottom" constant="50" id="Xri-lt-OF5"/>
                                             <constraint firstAttribute="trailing" secondItem="2mj-dz-rQP" secondAttribute="trailing" constant="20" id="YJ4-7h-UVt"/>
+                                            <constraint firstItem="WkI-g7-Cie" firstAttribute="leading" secondItem="ahC-u5-haX" secondAttribute="leading" id="ZEy-by-EoH"/>
+                                            <constraint firstAttribute="trailing" secondItem="WkI-g7-Cie" secondAttribute="trailing" id="cMS-r3-DyA"/>
                                             <constraint firstItem="VB3-Id-uei" firstAttribute="centerY" secondItem="ahC-u5-haX" secondAttribute="centerY" id="izI-75-eh3"/>
                                             <constraint firstItem="VB3-Id-uei" firstAttribute="centerX" secondItem="ahC-u5-haX" secondAttribute="centerX" id="joU-0H-uMU"/>
+                                            <constraint firstItem="WkI-g7-Cie" firstAttribute="top" secondItem="ahC-u5-haX" secondAttribute="top" id="kNl-YO-znD"/>
+                                            <constraint firstAttribute="trailing" secondItem="zmv-NG-4Wm" secondAttribute="trailing" id="mfU-Il-PGA"/>
                                             <constraint firstAttribute="trailing" secondItem="hPd-FZ-ZY5" secondAttribute="trailing" constant="20" id="mvK-Iv-0gZ"/>
+                                            <constraint firstItem="zmv-NG-4Wm" firstAttribute="leading" secondItem="ahC-u5-haX" secondAttribute="leading" id="vQe-uq-u9F"/>
                                             <constraint firstItem="VB3-Id-uei" firstAttribute="width" secondItem="ahC-u5-haX" secondAttribute="width" id="y2X-Sc-AyR"/>
                                         </constraints>
                                     </view>
@@ -128,64 +176,15 @@
                                     <rect key="frame" x="0.0" y="64" width="400" height="692"/>
                                 </variation>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkI-g7-Cie" userLabel="Top Nav Bar">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem enabled="NO" systemItem="action" id="vRW-mf-Cmd">
-                                        <connections>
-                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="zCW-zG-5Hl"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sbf-fo-TwR"/>
-                                    <barButtonItem enabled="NO" systemItem="cancel" id="a3b-v9-wSX">
-                                        <connections>
-                                            <action selector="cancelEditing:" destination="BYZ-38-t0r" id="SgH-BX-Jff"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                </variation>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmv-NG-4Wm">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HB7-ms-tGM"/>
-                                    <barButtonItem title="Album" id="FmK-75-GpR">
-                                        <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="H8o-Xj-Se7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="idU-ga-ROe"/>
-                                    <barButtonItem systemItem="camera" id="BH6-rd-JA8">
-                                        <connections>
-                                            <action selector="takeAnImageWithCamera:" destination="BYZ-38-t0r" id="9Hy-1x-SYK"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2tB-E7-IRS"/>
-                                </items>
-                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="356" width="600" height="44"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="756" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="WkI-g7-Cie" secondAttribute="trailing" constant="-20" id="3Wy-mE-8CM"/>
-                            <constraint firstAttribute="trailing" secondItem="zmv-NG-4Wm" secondAttribute="trailing" id="7k4-vA-bdO"/>
-                            <constraint firstItem="WkI-g7-Cie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="AGF-2S-36h"/>
                             <constraint firstAttribute="trailing" secondItem="MWj-Ik-VCB" secondAttribute="trailing" id="Gn8-oF-YiV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MWj-Ik-VCB" secondAttribute="bottom" id="KYq-Zt-7wp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zmv-NG-4Wm" secondAttribute="bottom" id="Lmp-E0-9Bv"/>
                             <constraint firstItem="ahC-u5-haX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-20" id="V08-PA-gUd"/>
                             <constraint firstItem="MWj-Ik-VCB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XfA-uD-m9W"/>
-                            <constraint firstItem="WkI-g7-Cie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YPX-GI-wAe"/>
                             <constraint firstItem="MWj-Ik-VCB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hIs-b2-ayj"/>
                             <constraint firstItem="ahC-u5-haX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jxs-S0-v18"/>
-                            <constraint firstItem="zmv-NG-4Wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lYA-kw-EwM"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>

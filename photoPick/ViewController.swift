@@ -99,8 +99,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         prepTextFields(textFieldBottom, text: "BOTTOM")
         activeField?.resignFirstResponder()
         shareButton.enabled = false
-        cancelButton.enabled = false
         imagePickerView.image = nil
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     
@@ -201,7 +203,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func textFieldDidBeginEditing(textField: UITextField) {
         activeField = textField
-        cancelButton.enabled = true
     }
     
     
