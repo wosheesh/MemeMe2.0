@@ -38,7 +38,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y26-lE-Rng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-811" y="107"/>
+            <point key="canvasLocation" x="-815" y="-214"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="Hmz-2r-Qvz">
@@ -55,7 +55,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwG-Fu-xW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-931" y="941"/>
+            <point key="canvasLocation" x="-815" y="518"/>
         </scene>
         <!--Meme Editor-->
         <scene sceneID="tne-QT-ifu">
@@ -204,9 +204,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="554"/>
+            <point key="canvasLocation" x="688" y="152"/>
         </scene>
-        <!--Sent Memes-->
+        <!--Sent Memes Table-->
         <scene sceneID="2zr-Fm-PxC">
             <objects>
                 <tableViewController id="fSM-Df-Cro" customClass="SentMemesTableViewController" customModule="photoPick" customModuleProvider="target" sceneMemberID="viewController">
@@ -229,13 +229,19 @@
                             <outlet property="delegate" destination="fSM-Df-Cro" id="rMB-uU-7sw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sent Memes" id="aTh-OC-PAT"/>
+                    <navigationItem key="navigationItem" title="Sent Memes Table" id="aTh-OC-PAT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cak-JK-YFb">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="xpG-jy-eCp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5Z-8M-ywo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="107"/>
+            <point key="canvasLocation" x="-115" y="-214"/>
         </scene>
-        <!--Sent Memes-->
+        <!--Sent Memes Collection-->
         <scene sceneID="8ea-kB-1w5">
             <objects>
                 <collectionViewController id="JwF-PH-OwJ" customClass="SentMemesCollectionViewController" customModule="photoPick" customModuleProvider="target" sceneMemberID="viewController">
@@ -264,7 +270,7 @@
                             <outlet property="delegate" destination="JwF-PH-OwJ" id="c7F-OU-8Ft"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Sent Memes" id="o0E-D2-N5s">
+                    <navigationItem key="navigationItem" title="Sent Memes Collection" id="o0E-D2-N5s">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tif-Ju-pnw">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="65V-Ln-3cZ"/>
@@ -274,7 +280,10 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4B-p2-UCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="941"/>
+            <point key="canvasLocation" x="-115" y="518"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xpG-jy-eCp"/>
+    </inferredMetricsTieBreakers>
 </document>
