@@ -119,10 +119,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             (activity, success, returnedItems, error) in
             print("Activity: \(activity) Success: \(success) Items: \(returnedItems) Error: \(error)")
             
-            // add meme to the memes array
-            let object = UIApplication.sharedApplication().delegate
-            let appDelegate = object as! AppDelegate
-            appDelegate.memes.append(memeToShare)
+            if success == true {
+                // add meme to the memes array
+                let object = UIApplication.sharedApplication().delegate
+                let appDelegate = object as! AppDelegate
+                appDelegate.memes.append(memeToShare)
+                print("meme added to memes")
+                
+                // dismiss the meme editor if sharing happened
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
 
         }
         
