@@ -89,6 +89,7 @@
                                                 </variation>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="Erd-k0-hXQ" appends="YES" id="7E8-dh-jiJ"/>
+                                                    <outletCollection property="gestureRecognizers" destination="9tm-mO-cCL" appends="YES" id="LkZ-tY-EfK"/>
                                                 </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mj-dz-rQP">
@@ -210,9 +211,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Erd-k0-hXQ">
                     <connections>
-                        <action selector="handlePan:" destination="BYZ-38-t0r" id="aCa-vP-LYb"/>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="yG2-c3-p0m"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ZRa-2S-Kzo"/>
                     </connections>
                 </panGestureRecognizer>
+                <pinchGestureRecognizer id="9tm-mO-cCL">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="m3H-fN-S1q"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Qm0-jh-1VY"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="688" y="152"/>
         </scene>

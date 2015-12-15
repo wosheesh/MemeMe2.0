@@ -10,7 +10,7 @@ import UIKit
 
 var activeField: UITextField?
 
-class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var takePictureButton: UIBarButtonItem!
@@ -228,15 +228,28 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         textField.clearsOnBeginEditing = false
     }
     
-// IMAGE GESTURES FUNCTIONS
+// IMAGE GESTURES FUNCTIONS -
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translationInView(self.view)
         if let view = recognizer.view {
-            view.center = CGPoint(x:view.center.x + translation.x,
-                y:view.center.y + translation.y)
+            view.center = CGPoint(x:view.center.x + translation.x, y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPointZero, inView: self.view)
     }
     
+    @IBAction func handlePinch(recognizer: UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformScale(view.transform, recognizer.scale, recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
+//    // Allow simultaneous gestures
+//    func gestureRecognizer(UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+//            return true
+//    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
-
