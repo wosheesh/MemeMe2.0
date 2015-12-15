@@ -12,31 +12,51 @@ import UIKit
 
 class SentMemesCollectionViewController: UICollectionViewController {
     
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
     var memes : [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
     
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     override func viewWillAppear(animated: Bool) {
         collectionView!.reloadData()
     }
     
-    override func viewDidLoad() {
+    
+    func adjustFlowSize(size: CGSize) {
         let space: CGFloat = 3.0
-        let dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        
+        let dimension:CGFloat = size.width >= size.height ? (size.width - (5 * space)) / 6.0 :  (size.width - (2 * space)) / 3.0
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSizeMake(dimension, dimension)
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // initial flow size adjustment
+        adjustFlowSize(self.view.frame.size)
+
+    }
+    
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        
+        //adjust spacing and size when device changes orientation
+        adjustFlowSize(size)
+
+    }
+
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memes.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomMemeCell", forIndexPath: indexPath) as! MemeCollectionViewCell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomMemeCell", forIndexPath: indexPath) as! MemeCollectionViewCell
         let meme = memes[indexPath.item]
         cell.MemeCellImage.image = meme.memedImage
