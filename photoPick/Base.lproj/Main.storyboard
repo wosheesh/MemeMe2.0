@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-1635" y="152"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="0Y6-15-APO">
             <objects>
                 <navigationController id="sv5-4g-h7X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rkb-2N-0jB"/>
+                    <tabBarItem key="tabBarItem" title="" image="TabIconTable" id="rkb-2N-0jB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="afk-sT-vWt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -46,7 +46,7 @@
         <scene sceneID="Hmz-2r-Qvz">
             <objects>
                 <navigationController title="Sent Memes" id="Ixq-lx-Kmw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grid" id="3a4-Dp-K3x"/>
+                    <tabBarItem key="tabBarItem" title="" image="TabIconGrid" id="3a4-Dp-K3x"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xvf-NZ-Zy5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -62,7 +62,7 @@
         <!--Meme Editor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Meme Editor" id="BYZ-38-t0r" customClass="ViewController" customModule="photoPick" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Meme Editor" id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="photoPick" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -272,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgY-De-suk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="-603"/>
+            <point key="canvasLocation" x="688" y="-637"/>
         </scene>
         <!--Sent Memes Collection-->
         <scene sceneID="8ea-kB-1w5">
@@ -330,6 +330,10 @@
             <point key="canvasLocation" x="-115" y="518"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TabIconGrid" width="25" height="25"/>
+        <image name="TabIconTable" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xpG-jy-eCp"/>
     </inferredMetricsTieBreakers>

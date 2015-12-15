@@ -12,6 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // sharing data across modules through appDelegate
     var memes = [Meme]()
 
 
