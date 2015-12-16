@@ -90,6 +90,7 @@
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="Erd-k0-hXQ" appends="YES" id="7E8-dh-jiJ"/>
                                                     <outletCollection property="gestureRecognizers" destination="9tm-mO-cCL" appends="YES" id="LkZ-tY-EfK"/>
+                                                    <outletCollection property="gestureRecognizers" destination="5Vf-Es-KIp" appends="YES" id="29q-g2-J2Y"/>
                                                 </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mj-dz-rQP">
@@ -221,6 +222,11 @@
                         <outlet property="delegate" destination="BYZ-38-t0r" id="Qm0-jh-1VY"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <tapGestureRecognizer id="5Vf-Es-KIp">
+                    <connections>
+                        <action selector="handleDoubleTap:" destination="BYZ-38-t0r" id="5Do-3D-4TV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="688" y="152"/>
         </scene>

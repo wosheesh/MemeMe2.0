@@ -244,10 +244,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
-//    // Allow simultaneous gestures
-//    func gestureRecognizer(UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
-//            return true
-//    }
+    // when doubletapped return the image to its original size
+    @IBAction func handleDoubleTap(recognizer: UITapGestureRecognizer) {
+        recognizer.numberOfTapsRequired = 2
+        
+        imagePickerView.center = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
+        imagePickerView.transform = CGAffineTransformIdentity;
+        
+    }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
