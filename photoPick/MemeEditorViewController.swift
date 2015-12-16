@@ -93,16 +93,19 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         presentViewController(pickerController, animated: true, completion: nil)
     }
     
-    
+//    Cancel behaves more intuitively. 
+//    Canceling while editing a textlabel only cancels the edition not the image and other field
     @IBAction func cancelEditing(sender: AnyObject) {
-        prepTextFields(textFieldTop, text: "TOP")
-        prepTextFields(textFieldBottom, text: "BOTTOM")
-        activeField?.resignFirstResponder()
         shareButton.enabled = false
-        imagePickerView.image = nil
         
-        dismissViewControllerAnimated(true, completion: nil)
-        
+        if activeField?.isFirstResponder() == true {
+            activeField!.resignFirstResponder()
+        } else {
+            imagePickerView.image = nil
+            prepTextFields(textFieldTop, text: "TOP")
+            prepTextFields(textFieldBottom, text: "BOTTOM")
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     
