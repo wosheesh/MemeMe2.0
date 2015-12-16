@@ -23,6 +23,7 @@
 		FEE822D51C21780A00EDCD60 /* tab_icon_table.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE822CF1C21780A00EDCD60 /* tab_icon_table.png */; };
 		FEE822D61C21780A00EDCD60 /* tab_icon_table@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE822D01C21780A00EDCD60 /* tab_icon_table@2x.png */; };
 		FEE822D71C21780A00EDCD60 /* tab_icon_table@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE822D11C21780A00EDCD60 /* tab_icon_table@3x.png */; };
+		FEE822D91C21785E00EDCD60 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FEE822D81C21785E00EDCD60 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FEE822CF1C21780A00EDCD60 /* tab_icon_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_table.png; sourceTree = "<group>"; };
 		FEE822D01C21780A00EDCD60 /* tab_icon_table@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_icon_table@2x.png"; sourceTree = "<group>"; };
 		FEE822D11C21780A00EDCD60 /* tab_icon_table@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_icon_table@3x.png"; sourceTree = "<group>"; };
+		FEE822D81C21785E00EDCD60 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FEE822CB1C21780A00EDCD60 /* Icons */,
 				FEDEBF821C0D9A4A00A777AF /* LaunchScreen.storyboard */,
 				FEDEBF851C0D9A4A00A777AF /* Info.plist */,
+				FEE822D81C21785E00EDCD60 /* readme.md */,
 			);
 			path = photoPick;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				FEAD38C11C1ED90D00F84C6D /* MemeDetailViewController.swift in Sources */,
 				FE8C7BF01C1EF57500D57465 /* MemeCollectionViewCell.swift in Sources */,
 				FE01A61A1C1DFDC6002AB4D2 /* SentMemesTableViewController.swift in Sources */,
+				FEE822D91C21785E00EDCD60 /* readme.md in Sources */,
 				FE1BB85C1C1205F800AC199C /* memeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
